@@ -1,0 +1,132 @@
+﻿
+<div class="wrap">
+	<h2>WPContactUs - General Settings </h2>
+
+	<form method="POST" action="">
+		<div>
+			<p>
+				<input type="hidden" name="nonce" value="{{nonce}}" />
+				<input type="hidden" name="update_settings" value="Y" />
+				<input type="submit" value="Save" class="convx-green-btn" />&nbsp;&nbsp;<span class="message-saved-text">{{message_saved}}</span>
+			</p>
+		</div>
+
+
+		<table class="table-c setting-row">
+			<tr>
+				<td valign="top">
+					<h3>
+						Slugs
+					</h3>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top">
+
+					<div style="padding-left:40px">
+
+						<span class="settings-help-text">
+						Enter the slug of the page where you will insert the <em>[conversations_login]</em> short code, with parameters for an end-user to login.<br />
+						</span>
+						<input type="text" size="45" name="conversations_end_users_login_page_slug" value="{{conversations_end_users_login_page_slug}}" />
+
+						<br /><br />
+
+						<span class="settings-help-text">
+							Either the slug of the page where you will insert the <em>[conversations_login]</em> short code, with parameters for the responder(s) to login.<br />
+						</span>
+						<input type="text" size="45" name="conversations_responders_login_page_slug" value="{{conversations_responders_login_page_slug}}" />
+
+						<br /><br />
+
+						<span class="settings-help-text">
+							Enter the slug of the page where you will insert the <em>[conversations_view_end_users]</em> short code, for end-users to view the conversations.<br />
+						</span>
+						<input type="text" size="45" name="conversations_end_users_view_page_slug" value="{{conversations_end_users_view_page_slug}}" />
+
+						<br /><br />
+
+						<span class="settings-help-text">
+							Enter the slug of the page where you will insert the <em>[conversations_view_responders]</em> short code, for responders to view the conversations.
+						</span>
+						<input type="text" size="45" name="conversations_responders_view_page_slug" value="{{conversations_responders_view_page_slug}}" />
+					</div>
+
+				</td>
+			</tr>
+		</table>
+
+		<table>
+			<tr>
+				<td colspan="2">
+					<hr class="hr-class" />
+				</td>
+			</tr>
+		</table>
+
+
+		<table class="table-c setting-row">
+			<tr>
+				<td>
+					<h3>
+						'From' Email address 
+					</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input size="50" name="conversations_email_from" value="{{conversations_email_from}}" />
+					<div class="settings-help-text" style="padding-left:40px">
+						The plugin sends an email to the end-users and the responders when a new conversation is<br />
+						started.<br /><br />	
+						Enter a valid 'From' email address in the format 'name &lt;email-address&gt;' for this email. <br />
+						For example, 'noreply &lt;noreply@your-domain.com&gt;'.<br />
+						<br />
+						Note that most hosting services will require this to be a valid email address to ensure delivery.<br />
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		<table>
+			<tr>
+				<td colspan="2">
+					<hr class="hr-class" />
+				</td>
+			</tr>
+		</table>
+
+		<table class="table-c setting-row">
+			<tr>
+				<td>
+					<h3>
+						Folder for screen templates for the front end
+					</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input size="50" name="conversations_template_folder" value="{{conversations_template_folder}}" />
+					<div class="settings-help-text" style="padding-left:40px">
+						Use the default supplied html template files or provide your own folder name here to change the design of the front end screens.<br /><br />
+						Supplied html templates files are located in:<br />		
+						&nbsp;&nbsp;templates/bootstrap/ (if you are using bootstrap) and<br />
+						&nbsp;&nbsp;templates/simple-html5/ (if you are not using bootstrap).<br />
+						<br />
+						The default setting is templates/simple-html5/
+					</div>
+				</td>
+			</tr>
+		</table>
+
+
+		<input type="hidden" name="conversations_convxns_sort_method" value="{{conversations_convxns_sort_method}}" />
+		<input type="hidden" name="conversations_convxns_unread_on_top" value="{{conversations_convxns_unread_on_top}}" />
+	</form>
+
+</div>
+
+
+
+
+

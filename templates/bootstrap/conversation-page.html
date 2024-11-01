@@ -1,0 +1,39 @@
+﻿<!-- The html for the whole page that displays multiple conversations one after the other -->
+<div class="wrap">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+			<div class="container">
+
+				<div class="row top-row0">
+					<div class="col-xs-12 col0">
+						<strong>Form Submissions</strong> <br />
+
+						<div style="float:left">{{first_name}} {{last_name}} ({{user_email}}) </div>
+						<div style="float:right">{{settings}}</div>
+
+						<input id="id_class_used_for_viewed_convxn" type="hidden" value="{{class_used_for_viewed_convxn}}" />
+						<input id="id_class_used_for_unviewed_convxn" type="hidden" value="{{class_used_for_unviewed_convxn}}" />
+
+						<input type="hidden" id="id_currently_viewing_convx" value="" />
+					</div>
+				</div>
+
+
+				<div class="row top-row0">
+					<div class="col-xs-12 col0">
+						{{conversation_text_template}}
+						{{conversation_page}}
+					</div>
+				</div>
+
+				<div class="row top-row0">
+					<div class="col-xs-12 col0">
+						<p>Powered by <a target="_blank" href="http://www.wpcontactus.com">www.wpcontactus.com</a></p>
+					</div>
+				</div>
+
+			</div>
+		</main><!-- #main -->
+	</div><!-- #primary -->
+</div><!-- .wrap -->

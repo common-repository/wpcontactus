@@ -1,0 +1,20 @@
+﻿<!-- login form if you prefer using ajax to login -->
+<div>
+    <h3>
+        {{heading}}
+    </h3>
+</div>
+
+<form>
+    <input type="text" id="id_user_email" required placeholder="E-Mail" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+    <input type="password" id="id_user_password" placeholder="Password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+
+    <input type="hidden" id="id_user_role" value="{{user_role}}" />
+    <input type="hidden" id="id_local_dt" value="" />
+
+    <input type="button" class="convx-submit-btn" name="submit" value="Submit" onclick="convx_login_ajax();" />
+
+	<input type="hidden" id="id_redirect_success_uri" value="{{redirect_success_uri}}" />
+	<input type="hidden" id="id_redirect_fail_uri" value="{{redirect_fail_uri}}" />
+</form>
+

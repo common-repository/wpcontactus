@@ -1,0 +1,30 @@
+﻿<div class="wrap">
+	<h2>WPContactUs - Form Processing Settings </h2>
+
+	<form name="form_add_new_category" method="POST" action="">
+		<div style="float:right">
+			<input type="hidden" name="nonce" value="{{nonce}}" />
+
+			<input type="hidden" name="add_new_form_settings" value="Y" />
+
+			<input type="text" placeholder="Enter a form category" id="id_new_form_category" name="new_form_category" width="25"/>
+			<input type="submit" onclick="return validate_add_settings_for_a_new_form_input();" value="Add settings for a new form" class="convx-submit-btn" /><br />
+		</div>
+	</form>
+
+	<form name="form_select_category" method="POST" action="">
+		<div>
+			<input type="hidden" name="nonce" value="{{nonce}}" />
+
+			 <input type="hidden" name="show_form_settings" value="Y" />
+ 
+			 <select id="id_selected_form_category" name="select_form_category"  onchange="load_new_form_settings(); this.form.submit()">
+				 {{select_form_categories}}
+			</select> 
+			<img id="id_loader_settings" src="images/loading.gif" style="display:none"/>
+		</div>
+	</form>
+
+	{{settings_of_a_form}}
+
+</div>

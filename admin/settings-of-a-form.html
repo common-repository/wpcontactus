@@ -1,0 +1,164 @@
+﻿<div>
+
+	<div style="float:right">
+		<form name="form_delete_category" method="POST" action="">
+			<div>
+				<input type="hidden" name="nonce" value="{{nonce}}" />
+
+				<input type="hidden" name="delete_form_settings" value="Y" />
+				<input type="hidden" name="form_category" value="{{form_category}}" />
+				<input type="submit" value="Delete this form" class="convx-red-btn" />
+			</div>
+		</form>
+	</div>
+
+	<div>
+		<form name="form_category_settings" method="POST" action="">
+			<h3>Form Category: {{conversations_form_category_title}} </h3>
+			<div>
+				<input type="hidden" name="nonce" value="{{nonce}}" />
+
+				<input type="hidden" name="save_form_settings" value="Y" />
+				<input type="hidden" name="form_category" value="{{form_category}}" />
+				<input type="submit" value="Save all settings" class="convx-green-btn" />&nbsp;&nbsp;<span class="message-saved-text">{{message_saved}}</span>
+			</div>
+
+
+
+			<div>
+				<table>
+					<tr>
+						<td colspan="2">
+							<h3>What is the field name in your form for the following?</h3>
+							<h4>See "Specifying fields for..." at <a href="http://www.wpcontactus.com/documentation" target="_blank">http://www.wpcontactus.com</a> depending on your form plug-in, or custom PHP form.</h4>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							First name
+						</td>
+						<td>
+							<input type="text" name="conversations_first_name" size="25" value="{{conversations_first_name}}" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Last name
+						</td>
+						<td>
+							<input type="text" name="conversations_last_name" size="25" value="{{conversations_last_name}}" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							End user's email address*
+						</td>
+						<td>
+							<input type="text" name="conversations_email" size="25" value="{{conversations_email}}" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Form Category
+						</td>
+						<td>
+							<input type="text" name="conversations_form_category" size="25" value="{{conversations_form_category}}" readonly />
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<span class="message-highlight-text">
+								Add a hidden field to your form, <strong>conversations_form_category</strong> with the value equal to <strong>{{conversations_form_category}}</strong>.<br />						
+							</span>
+						</td>
+					</tr>
+
+
+					<tr>
+						<td colspan="2">
+							<h3>Send Email notifications to:</h3>
+
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							&nbsp;
+						</td>
+						<td>
+							<input type="checkbox" name="conversations_email_resp_staff" {{conversations_email_resp_staff}} /> Responders<br />
+							<input type="checkbox" name="conversations_email_enduser" {{conversations_email_enduser}} /> End Users<br />
+
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<h3>Do you want the end user to see the information provided in this form as a part of the conversation?</h3>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%"></td>
+						<td>
+							<input type="radio" name="conversations_show_form_to_user" value="yes" {{conversations_show_form_to_user_yes}} /> Yes<br />
+							<input type="radio" name="conversations_show_form_to_user" value="no" {{conversations_show_form_to_user_no}} /> No<br />
+						</td>
+					</tr>
+
+
+					<tr>
+						<td colspan="2">
+							<h3>Select the method of picking form fields to be part of the conversation:</h3>
+
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<input type="radio" name="conversations_field_pick_method" value="all" {{conversations_field_pick_method_all}} />
+							Pick all fields in the $_POST variable, except those specified below&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+							<div>
+								{{conversations_form_fields_exclude}}
+							</div>
+						</td>
+						<td>
+							<input type="radio" name="conversations_field_pick_method" value="chosen" {{conversations_field_pick_method_chosen}} />
+							Pick only fields specified below, from the $_POST variable<br />
+							<div>
+								{{conversations_form_fields_include}}
+							</div>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<p>
+								You can use regex expressions for dynamically named fields in your form. For example:<br />
+								<span class="code-font">ip[.]*</span>  will indicate any field name starting with "ip".<br />
+								<h4>See "Specifying fields for..." at <a href="http://www.wpcontactus.com/documentation" target="_blank">http://www.wpcontactus.com</a> depending on your form plug-in, or custom PHP form.</h4>								
+
+							</p>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<h3>If you need more fields above, enter how many you need below. Save to refresh the page.</h3>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%"></td>
+						<td>
+							<input type="text" name="conversations_field_count" size="5" value="{{conversations_field_count}}" />
+						</td>
+					</tr>
+
+				</table>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+
+
+

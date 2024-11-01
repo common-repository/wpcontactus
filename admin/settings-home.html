@@ -1,0 +1,176 @@
+﻿
+<div class="wrap">
+	<h2>WPContactUs - Integration with your Website</h2>
+
+		<table class="table-c setting-row">
+			<tr>
+				<td style="vertical-align: top;padding:5px;">
+					<h3>Terminology</h3>
+
+					<span style="color:#6d0f14">End users</span> are visitors to your website who fill up and submit a form.
+					<br />
+					<br />
+					<span style="color:#00f">Responders</span> are people in your company will respond or reply to the end users.
+
+
+					<br /><br />
+				</td>
+
+
+			</tr>
+		</table>
+
+		<table>
+			<tr>
+				<td>
+					<hr class="hr-class" />
+				</td>
+			</tr>
+		</table>
+
+		<table class="table-c setting-row">
+			<tr>
+				<td style="vertical-align: top;padding:5px;">
+					<h3>Short Codes Parameters</h3>
+
+					<div style="padding-left:20px;">
+
+						<div>
+							The <span style="color:#6d0f14">[conversations_login]</span> short code takes 5 parameters:<br /><br />
+							<span style="color:#393939">title</span>: The title to use for the login form (e.g. 'Responders Login', 'Users Login', or blank)<br />
+							<span style="color:#393939">user_role</span> : Whether you want this to be the login form of the responder ('responder') or end user ('end-user')<br />
+							<span style="color:#393939">redirect_success_uri</span> : Slug of the page to get redirected to, after a successful login.<br />
+							<span style="color:#393939">redirect_fail_uri</span> : Slug of the page to get redirected to, after a failed login.<br />
+							<span style="color:#393939">ajax</span> : Wether to use ajax or not for the login ('true' or 'false')<br />
+							<br />
+
+							e.g. End User Login Form:<br />
+							[<span style="color:#6d0f14">conversations_login</span><br />
+							<div style="padding-left:30px;">
+								user_role="end-user"<br />
+								title="End User's Login"<br />
+								redirect_failure="/sign-on-end-users"<br />
+								redirect_success="/end-users-page-view/"<br />
+								ajax="true"]
+							</div>
+							<br />
+							<br />
+
+							e.g. Responder Login Form:<br />
+							[<span style="color:#6d0f14">conversations_login</span><br />
+							<div style="padding-left:30px;">
+								user_role="responder"<br />
+								title="Responder's Login"<br />
+								redirect_failure="/sign-on-responders"<br />
+								redirect_success="/responders-page-view/"<br />
+								ajax="true"]
+							</div>
+
+						</div>
+						<br /><br />
+					</div>
+				</td>
+
+
+			</tr>
+		</table>
+
+		<table>
+			<tr>
+				<td colspan="2">
+					<hr class="hr-class" />
+				</td>
+			</tr>
+		</table>
+
+		<table class="table-c setting-row">
+			<tr>
+				<td colspan="2" style="vertical-align: top;padding:5px;">
+					<h3>
+						Responder Accounts
+					</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</td>
+
+				<td>
+					<table class="table-r">
+						<tr>
+							<td>
+								Login
+							</td>
+							<td>
+								Display Name
+							</td>
+							<td>
+								Email
+							</td>
+							<td>
+								Temp Password Assigned
+							</td>
+						</tr>
+
+						{{responders_block}}
+
+						<tr>
+							<td colspan="3">
+								<div>
+									<br />
+									A single responders login has been created for you. 
+									Add, Modify, and Delete responder logins and their passwords in the WordPress Users section.<br />
+									Make sure that their WordPress user role is 'Conversations Responders'. <br />
+									<br />
+									An End Users' login is created automatically from the email address in the form, unless it already exists. <br />
+									Their WordPress user role is "Conversations End Users".
+								</div>
+							</td>
+						</tr>
+					</table>
+				</td>
+
+
+			</tr>
+		</table>
+
+		<table>
+			<tr>
+				<td colspan="2">
+					<hr class="hr-class" />
+				</td>
+			</tr>
+		</table>
+
+
+
+
+
+	<table class="table-c setting-row">
+
+		<tr>
+			<td colspan="2" style="vertical-align: top;padding:5px;">
+				<h2>Notes</h2>
+			</td>
+		</tr>
+
+		<tr>
+			<td style="vertical-align: top;padding:5px;">
+				<ol>
+					<li>
+						The plugin creates a database table &lt;prefix&gt;convxns_log, where &lt;prefix&gt; is the prefix of your WordPresss database. This table stores a log of activity. If you are not able to see the conversations as 
+						expected, look here for any logged error message entries.
+					</li>
+				</ol>
+			</td>
+		</tr>
+
+	</table>
+
+</div>
+
+
+
+
+

@@ -1,0 +1,47 @@
+﻿<!-- The html for a single conversation -->
+<!-- the initial part "class_viewed=", "class_not_viewed=" is stripped leaving what is relevant class to be used -->
+<div id="convx_single_{{this_convx_id}}" class="panel {{class_viewed=panel-default}} {{class_not_viewed=panel-primary}}" onclick="convx_viewed({{this_convx_id}}, {{largest_follow_up_id_i_see}}, {{user_role}})">
+	<div class="panel-heading" onclick="convx_show({{this_convx_id}})">
+
+		{{convx_title}}
+
+
+		<div>
+			{{convx_start_date}} {{convx_start_time}}
+		</div>
+
+		<div style="clear: both;"></div>
+	</div>
+
+	<div id="panel_no_{{this_convx_id}}" class="panel-collapse collapse">
+
+		{{convx_delete}}
+
+		<div class="panel-body">
+
+			<div style='float:right;'>
+				<span style="display:{{form-viewed}}">&checkmark;</span>
+			</div>
+
+			<div class="form-data">
+				{{convx_form_data}}
+			</div>
+
+
+			{{follow_ups}}
+
+			<input type="hidden" id="id_largest_follow_up_id_i_see_convx_{{this_convx_id}}" value="{{largest_follow_up_id_i_see}}" />
+		</div>
+		<div class="panel-footer">
+			<div style="display:inline">
+				<button class="convx-send-btn" style="float:right;margin-bottom:5px" onclick="show_reply_form({{this_convx_id}})">Reply</button>
+			</div>
+			<div style="clear: both;"></div>
+			{{response_form}}
+		</div>
+
+
+
+	</div>
+
+</div>

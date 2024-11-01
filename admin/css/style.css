@@ -1,0 +1,96 @@
+﻿.setting-row {
+	color: #333;
+	display: block;
+	position: relative;
+	width: 100%;
+}
+	
+.settings-help-text {
+
+	color: #0049f7;
+	font-family:'Trebuchet MS';
+}
+
+.message-saved-text {
+	font-size: 16px;
+	color: #0049f7;
+}
+
+.message-highlight-text {
+	color: #0049f7;
+}
+
+.table-c {
+	background-color: #e9e5e5;
+	color:#6b6b6b;
+	width:100%;
+}
+
+.table-c td {
+	vertical-align:top;
+	font-family:'Trebuchet MS';
+
+}
+
+.table-r {
+	background-color: #e9e5e5;
+	color:#6b6b6b;
+	width:100%;
+}
+
+.convx-submit-btn {
+    background-color: #0085ba;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.convx-green-btn {
+    background-color: #46a505;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.convx-red-btn {
+	background-color: #d45151;
+	border: none;
+	color: white;
+	padding: 2px 4px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 11px;
+}
+
+
+.hr-class {
+	display: block;
+	position: relative;
+	padding: 0;
+	height: 0;
+	width: 100%;
+	max-height: 0;
+	font-size: 1px;
+	line-height: 0;
+	clear: both;
+	border: none;
+	border-top: 1px solid #6b6b6b;
+	border-bottom: 1px solid #6b6b6b;
+}
+
+.color-blue {
+	color: #0049f7;
+}
+
+.code-font {
+	font-family: 'Courier New';
+}

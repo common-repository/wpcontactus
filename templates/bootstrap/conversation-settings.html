@@ -1,0 +1,24 @@
+﻿<!-- The top segment inside a conversations page where the sorting icons are displayed -->
+<div style="float:right;padding:0 5px 0 0">
+	<img id="id_loader_settings" src="{{images_folder}}loading.gif" style="display:none" />
+
+	<span title="Refresh" onclick="refresh_screen()" class="convx-page-icons">&circlearrowright;</span>
+
+	&nbsp;&nbsp;
+
+	<span title="Most recent first" onclick="convx_sort_settings(2, {{logged_in_user_id}})" class="convx-page-icons">&blacktriangledown;</span>
+
+	&nbsp;&nbsp;
+
+	<span title="Oldest first"onclick="convx_sort_settings(1, {{logged_in_user_id}})" class="convx-page-icons">&blacktriangle;</span>
+
+	&nbsp;&nbsp;
+	
+	<span title="Show unread conversations on top" onclick="convx_sort_settings(3, {{logged_in_user_id}})" class="convx-page-icons">&DownTeeArrow;</span>
+	
+	&nbsp;&nbsp;
+	
+	<span title="No need to show unread conversations on top" onclick="convx_sort_settings(4, {{logged_in_user_id}})" class="convx-page-icons">&VerticalSeparator;</span>
+	
+	&nbsp;&nbsp;
+</div>
